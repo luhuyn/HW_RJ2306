@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using static in ES6</title>
+</head>
+
+<body>
+    <script>
+        class Information {
+            constructor(name, description) {
+                this.name = name;
+                this.description = description;
+            }
+
+            static calculate(value = 1) {
+                return value * 3;
+            }
+        }
+
+        class Geometry extends Information {
+            constructor(name, description, length) {
+                super(name, description);
+                this.length = length;
+            }
+        }
+
+        const geometryObject = new Geometry("Geometry Object", "This is a geometry object", 5);
+
+        console.log(geometryObject.name); 
+        console.log(geometryObject.description); 
+        console.log(geometryObject.length); 
+
+        const calculatedValue = Information.calculate(4);
+        console.log(calculatedValue); 
+
+    </script>
+</body>
+
+</html>
