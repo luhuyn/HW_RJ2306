@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Set to manipulate data</title>
+</head>
+
+<body>
+    <script>
+        const zooAnimals = new Set(["Lion", "Monkey", "Tiger"]);
+
+        zooAnimals.add("Lion");
+        zooAnimals.add("Tiger");
+        zooAnimals.add("Elephant");
+        zooAnimals.add("Giraffe");
+
+        if (zooAnimals.has("Giraffe")) {
+            console.log("Giraffe is already in the zoo.");
+        } else {
+            console.log("Giraffe is not in the zoo.");
+        }
+
+        zooAnimals.delete("Tiger");
+
+        console.log("Zoo Animals: ");
+        zooAnimals.forEach(animal => {
+            console.log(animal);
+        });
+
+    </script>
+</body>
+
+</html>
