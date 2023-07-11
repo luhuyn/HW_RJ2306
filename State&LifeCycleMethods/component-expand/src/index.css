@@ -1,0 +1,36 @@
+.enchanted-title {
+  color: #F2BED1;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.view-button,
+.hide-button {
+  background-color: #F2D8D8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.view-button:hover,
+.hide-button:hover {
+  background-color: #E8A0BF;
+}
+
+.enchanted-text {
+  text-align: center;
+  color: #FDCEDF;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 20px;
+}
