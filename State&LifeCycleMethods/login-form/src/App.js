@@ -33,6 +33,7 @@ function App() {
 
   const handleLogout = () => {
     setIsLoggedIn(false);
+    alert('Goodbye!');
   };
 
   if (isLoggedIn) {
@@ -58,7 +59,9 @@ function App() {
               <input type="checkbox" name="isRemember" value={form.isRemember} onChange={handleChangeCheckbox} /> Remember me
             </label>
           </div>
-          <button className="w-100 btn btn-lg btn-primary" type="button" onClick={handleSubmit}>Sign in</button>
+          <button className="w-100 btn btn-lg btn-primary" type="button" onClick={handleSubmit}>
+            Sign in
+          </button>
           <p className="mt-5 mb-3 text-muted">© 2023</p>
         </form>
       </div>
