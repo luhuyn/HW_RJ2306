@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 
-ReactDOM.render(
+const root = document.getElementById('root');
+const rootElement = (
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
+
+ReactDOM.createRoot(root).render(rootElement);
