@@ -48,7 +48,11 @@
   
   .success-message {
     margin-top: 15px;
-    color: #FFAACF;
+    color: green;
     font-weight: bold;
   }
-  
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
