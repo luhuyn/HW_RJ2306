@@ -3,13 +3,37 @@ import { Formik, Form } from 'formik';
 import '../components/ContactForm.css';
 const ContactForm = () => {
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [errors, setErrors] = useState({});
 
   const handleSubmit = (values, { setSubmitting }) => {
-    // Do something with the form data (e.g., submit to a server)
-    // For this example, we'll just show an alert and set submitSuccess to true
-    alert('Add contact successfully!!!');
-    setSubmitting(false);
-    setSubmitSuccess(true);
+    if (validateForm(values)) {
+      alert('Add contact successfully!!!');
+      setSubmitting(false);
+      setSubmitSuccess(true);
+    } else {
+      setSubmitting(false);
+    }
+  };
+
+  const validateForm = (values) => {
+    const newErrors = {};
+
+    if (!values.name) {
+      newErrors.name = 'Required';
+    }
+
+    if (!values.email) {
+      newErrors.email = 'Required';
+    } else if (!/^[\w+.-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(values.email)) {
+      newErrors.email = 'Invalid email format';
+    }
+
+    if (!values.phone) {
+      newErrors.phone = 'Required';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0; // Return true if there are no errors
   };
 
   return (
@@ -35,6 +59,7 @@ const ContactForm = () => {
                 value={values.name}
                 onChange={handleChange}
               />
+              {errors.name && <div className="error">{errors.name}</div>}
             </div>
 
             <div className="form-group">
@@ -46,6 +71,7 @@ const ContactForm = () => {
                 value={values.email}
                 onChange={handleChange}
               />
+              {errors.email && <div className="error">{errors.email}</div>}
             </div>
 
             <div className="form-group">
@@ -57,6 +83,7 @@ const ContactForm = () => {
                 value={values.phone}
                 onChange={handleChange}
               />
+              {errors.phone && <div className="error">{errors.phone}</div>}
             </div>
 
             <div className="form-group">
