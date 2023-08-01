@@ -15,7 +15,7 @@ const UserDetails = () => {
           setUser(response.data);
         })
         .catch(error => {
-          console.error(error); // Log the error to the console
+          console.error(error); 
         });
     }
   }, [userId]);
@@ -36,7 +36,7 @@ const UserDetails = () => {
           navigate('/');
         })
         .catch(error => {
-          console.error(error); // Log the error to the console for debugging
+          console.error(error); 
           alert('Error creating user. Please try again later.');
         });
     } else {
@@ -46,7 +46,7 @@ const UserDetails = () => {
           alert(`Edit user ${JSON.stringify(response.data)} successfully!!!`);
         })
         .catch(error => {
-          console.error(error); // Log the error to the console for debugging
+          console.error(error); 
           alert('Error updating user. Please try again later.');
         });
     }
