@@ -1,0 +1,20 @@
+{
+  "users": [
+    { "id": 1, "name": "Luu Huyen" },
+    { "id": 2, "name": "Kieu Dat" },
+    { "id": 3, "name": "Nhat Giang" },
+    { "id": 4, "name": "Hai Duc" }
+  ],
+  "comments": [
+    { "id": 1, "content": "hello", "user_id": 1 },
+    { "id": 2, "content": "bonjour", "user_id": 2 },
+    { "id": 3, "content": "ciao", "user_id": 3 },
+    { "id": 4, "content": "xin chào", "user_id": 4 }
+  ],
+  "posts": [
+    { "id": 1, "content": "Post 1", "user_id": 1 },
+    { "id": 2, "content": "Post 2", "user_id": 2 },
+    { "id": 3, "content": "Post 3", "user_id": 3 },
+    { "id": 4, "content": "Post 4", "user_id": 4 }
+  ]
+}
