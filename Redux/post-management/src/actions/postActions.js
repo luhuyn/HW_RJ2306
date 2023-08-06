@@ -1,4 +1,3 @@
-// file: src/actions/postActions.js
 import axios from "axios";
 import { FETCH_POSTS_SUCCESS, ADD_POST_SUCCESS, UPDATE_POST_SUCCESS } from "./types";
 
