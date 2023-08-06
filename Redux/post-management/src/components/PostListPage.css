@@ -1,0 +1,47 @@
+ul {
+    list-style: none;
+}
+
+body{
+    font-family: "Arial", sans-serif;
+}
+.post-container {
+    padding: 16px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+.post-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px; 
+}
+  
+.post-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.post-content h6 {
+    font-weight: bold;
+    margin: 0;
+    flex-grow: 1;
+}
+
+
+.add-button  {
+    margin-left: 10px;
+    background-color: green !important;
+}
+
+
+.MuiPaper-root {
+    background-color: #fff;
+}
+
+.MuiButton-root {
+    text-transform: none !important;
+}
