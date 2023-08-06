@@ -1,8 +1,7 @@
-// file: src/reducers/postReducer.js
 import { FETCH_POSTS_SUCCESS, ADD_POST_SUCCESS, UPDATE_POST_SUCCESS } from "../actions/types";
 
 const initialState = {
-  posts: [], // Ensure that 'posts' is initialized as an empty array
+  posts: [], 
 };
 
 const postReducer = (state = initialState, action) => {
