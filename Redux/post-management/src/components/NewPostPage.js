@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addPost } from "../actions/postActions";
 import { useNavigate } from "react-router-dom";
+import { Typography, Container, TextField, Button, Box } from "@mui/material";
 
 const NewPostPage = () => {
   const [title, setTitle] = useState("");
@@ -18,29 +19,42 @@ const NewPostPage = () => {
   };
 
   return (
-    <div>
-      <h1>New Post</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Title</label>
-          <input
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label>Content</label>
-          <textarea
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Add</button>
-      </form>
-    </div>
+    <Container maxWidth="sm">
+      <Box mt={3}>
+        <Typography variant="h4" gutterBottom>
+          New Post
+        </Typography>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <TextField
+              label="Title"
+              variant="outlined"
+              fullWidth
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              required
+              margin="normal"
+            />
+          </div>
+          <div>
+            <TextField
+              label="Content"
+              variant="outlined"
+              multiline
+              rows={5}
+              fullWidth
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              required
+              margin="normal"
+            />
+          </div>
+          <Button type="submit" variant="contained" color="primary">
+            Add
+          </Button>
+        </form>
+      </Box>
+    </Container>
   );
 };
 
